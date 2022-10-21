@@ -43,7 +43,7 @@
 
                                 echo '<tr>
                                     <td>' .$Id. '</td>
-                                    <td><img src="/OnlinePizzaDelivery/img/person-' .$Id. '.jpg" alt="image for this user" onError="this.src =\'/OnlinePizzaDelivery/img/profilePic.jpg\'" width="100px" height="100px"></td>
+                                    <td><img src="/tcc/img/person-' .$Id. '.jpg" alt="image for this user" onError="this.src =\'/tcc/img/profilePic.jpg\'" width="100px" height="100px"></td>
                                     <td>' .$username. '</td>
                                     <td>
                                         <p>First Name : <b>' .$firstName. '</b></p>
@@ -177,7 +177,7 @@
                     </form>         
                 </div>
                 <div class="form-group col-md-4">
-                    <img src="/OnlinePizzaDelivery/img/person-<?php echo $Id; ?>.jpg" alt="Profile Photo" width="100" height="100" onError="this.src ='/OnlinePizzaDelivery/img/profilePic.jpg'">
+                    <img src="/tcc/img/person-<?php echo $Id; ?>.jpg" alt="Profile Photo" width="100" height="100" onError="this.src ='/tcc/img/profilePic.jpg'">
                     <form action="partials/_userManage.php" method="post">
                         <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
                         <button type="submit" class="btn btn-success mt-2" name="removeProfilePhoto">Remover Imagem</button>

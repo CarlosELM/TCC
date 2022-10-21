@@ -16,7 +16,7 @@
             <thead style="background-color: rgb(111 202 203);">
                 <tr>
                     <th>ID do Pedido</th>
-                    <th>ID do Usuário</th>
+                    <th>Usuário</th>
                     <th>Endereço</th>
                     <th>Número de Telefone</th>
                     <th>Preço</th>						
@@ -28,11 +28,11 @@
             </thead>
             <tbody>
                 <?php
-                    $sql = "SELECT * FROM `orders`";
+                    $sql = "select * from orders as o inner join users as u on u.id = o.userId;";
                     $result = mysqli_query($conn, $sql);
                     $counter = 0;
                     while($row = mysqli_fetch_assoc($result)){
-                        $Id = $row['userId'];
+                        $username = $row['username'];
                         $orderId = $row['orderId'];
                         $address = $row['address'];
                         $zipCode = $row['zipCode'];
@@ -52,7 +52,7 @@
                         
                         echo '<tr>
                                 <td>' . $orderId . '</td>
-                                <td>' . $Id . '</td>
+                                <td>' . $username . '</td>
                                 <td data-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
                                 <td>' . $phoneNo . '</td>
                                 <td>' . $amount . '</td>

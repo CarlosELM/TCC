@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $numExistRows = mysqli_num_rows($result);
     if($numExistRows > 0){
         $showError = "Esse usuário já existe!";
-        header("Location: /OnlinePizzaDelivery/index.php?signupsuccess=false&error=$showError");
+        header("Location: /tcc/index.php?signupsuccess=false&error=$showError");
     }
     else{
       if(($password == $cpassword)){
@@ -25,12 +25,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $result = mysqli_query($conn, $sql);
           if ($result){
               $showAlert = true;
-              header("Location: /OnlinePizzaDelivery/index.php?signupsuccess=true");
+              header("Location: /tcc/index.php?signupsuccess=true");
           }
       }
       else{
           $showError = "As senhas não são iguais!";
-          header("Location: /OnlinePizzaDelivery/index.php?signupsuccess=false&error=$showError");
+          header("Location: /tcc/index.php?signupsuccess=false&error=$showError");
       }
     }
 }

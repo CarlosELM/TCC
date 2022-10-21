@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $deletesql = "DELETE FROM `viewcart` WHERE `userId`='$userId'";   
                 $deleteresult = mysqli_query($conn, $deletesql);
                 echo '<script>alert("Obrigado por comprar com a gente! O número do seu pedido é ' .$orderId. '.");
-                    window.location.href="http://localhost/OnlinePizzaDelivery/index.php";  
+                    window.location.href="http://localhost/tcc/index.php";  
                     </script>';
                     exit();
             }

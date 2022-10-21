@@ -59,7 +59,7 @@
 
                                 echo '<tr>
                                         <td class="text-center"><b>' .$catId. '</b></td>
-                                        <td><img src="/OnlinePizzaDelivery/img/card-'.$catId. '.jpg" alt="image for this Category" width="150px" height="150px"></td>
+                                        <td><img src="/tcc/img/card-'.$catId. '.jpg" alt="image for this Category" width="150px" height="150px"></td>
                                         <td>
                                             <p>Nome: <b>' .$catName. '</b></p>
                                             <p>Descrição: <b class="truncate">' .$catDesc. '</b></p>
@@ -116,7 +116,7 @@
 					<button type="submit" class="btn btn-success my-1" name="updateCatPhoto">Atualizar Imagem</button>
 				</div>
 				<div class="form-group col-md-4">
-					<img src="/OnlinePizzaDelivery/img/card-<?php echo $catId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="Category image" width="100" height="100">
+					<img src="/tcc/img/card-<?php echo $catId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="Category image" width="100" height="100">
 				</div>
 			</div>
 		</form>
