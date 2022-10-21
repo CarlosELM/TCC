@@ -18,7 +18,7 @@
   <!-- Category container starts here -->
   <div class="container my-3 mb-5">
     <div class="col-lg-2 text-center bg-light my-3" style="margin:auto;border-top: 2px groove black;border-bottom: 2px groove black;">     
-      <h2 class="text-center">Cardápio </h2>
+      <h2 class="text-center"><b>Cardápio</b> </h2>
     </div>
     <div class="row">
       <!-- Fetch all the categories and use a loop to iterate through categories -->
@@ -33,9 +33,9 @@
                   <div class="card" style="width: 18rem;">
                     <img src="img/card-'.$id. '.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
                     <div class="card-body">
-                      <h5 class="card-title"><a href="viewPizzaList.php?catid=' . $id . '">' . $cat . '</a></h5>
+                      <h5 class="card-title"><a href="viewPizzaList.php?catid=' . $id . '" style="color: #EEAD2D"><b>' . $cat . '</b></a></h5>
                       <p class="card-text">' . substr($desc, 0, 30). '... </p>
-                      <a href="viewPizzaList.php?catid=' . $id . '" class="btn btn-primary">Ver Tudo</a>
+                      <a href="viewPizzaList.php?catid=' . $id . '" class="btn btn-warning"><b> Ver Tudo</b></a>
                     </div>
                   </div>
                 </div>';

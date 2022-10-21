@@ -52,7 +52,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         </ul>
         <form method="get" action="/tcc/search.php" class="form-inline my-2 my-lg-0 mx-3">
           <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Pesquisar" aria-label="Search" required>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>';
 
         $countsql = "SELECT SUM(`itemQuantity`) FROM `viewcart` WHERE `userId`=$userId"; 
@@ -72,7 +72,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         if($loggedin){
           echo '<ul class="navbar-nav mr-2">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"> Bem vindo ' .$username. '</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" > Bem vindo <b>' .$username. '</b></a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="partials/_logout.php">Sair</a>
               </div>

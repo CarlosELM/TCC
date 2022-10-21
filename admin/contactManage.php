@@ -33,12 +33,12 @@
                     </thead>
                     <tbody>
                         <?php
-                            $sql = "SELECT * FROM contact"; 
+                            $sql = "select * from contact as c inner join users as u on u.id = c.userId;"; 
                             $result = mysqli_query($conn, $sql);
                             $count = 0;
                             while($row=mysqli_fetch_assoc($result)) {
                                 $contactId = $row['contactId'];
-                                $userId = $row['userId'];
+                                $username = $row['username'];
                                 $email = $row['email'];
                                 $phoneNo = $row['phoneNo'];
                                 $orderId = $row['orderId'];
@@ -48,7 +48,7 @@
 
                                 echo '<tr>
                                         <td>' .$contactId. '</td>
-                                        <td>' .$userId. '</td>
+                                        <td>' .$username. '</td>
                                         <td>' .$email. '</td>
                                         <td>' .$phoneNo. '</td>
                                         <td>' .$orderId. '</td>
