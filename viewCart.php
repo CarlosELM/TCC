@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Cart</title>
-    <link rel = "icon" href ="img/logo.jpg" type = "image/x-icon">
+    <link rel = "icon" href ="img/logo.png" type = "image/x-icon">
     <style>
     #cont{
         min-height : 626px;
@@ -56,32 +56,32 @@
                                 $counter = 0;
                                 $totalPrice = 0;
                                 while($row = mysqli_fetch_assoc($result)){
-                                    $pizzaId = $row['pizzaId'];
+                                    $produtoId = $row['produtoId'];
                                     $Quantity = $row['itemQuantity'];
-                                    $mysql = "SELECT * FROM `pizza` WHERE pizzaId = $pizzaId";
+                                    $mysql = "SELECT * FROM `produto` WHERE produtoId = $produtoId";
                                     $myresult = mysqli_query($conn, $mysql);
                                     $myrow = mysqli_fetch_assoc($myresult);
-                                    $pizzaName = $myrow['pizzaName'];
-                                    $pizzaPrice = $myrow['pizzaPrice'];
-                                    $total = $pizzaPrice * $Quantity;
+                                    $produtoName = $myrow['produtoName'];
+                                    $produtoPrice = $myrow['produtoPrice'];
+                                    $total = $produtoPrice * $Quantity;
                                     $counter++;
                                     $totalPrice = $totalPrice + $total;
 
                                     echo '<tr>
                                             <td>' . $counter . '</td>
-                                            <td>' . $pizzaName . '</td>
-                                            <td>R$' . $pizzaPrice . '</td>
+                                            <td>' . $produtoName . '</td>
+                                            <td>R$' . $produtoPrice . '</td>
                                             <td>
-                                                <form id="frm' . $pizzaId . '">
-                                                    <input type="hidden" name="pizzaId" value="' . $pizzaId . '">
-                                                    <input type="number" name="quantity" value="' . $Quantity . '" class="text-center" onchange="updateCart(' . $pizzaId . ')" onkeyup="return false" style="width:60px" min=1 oninput="check(this)" onClick="this.select();">
+                                                <form id="frm' . $produtoId . '">
+                                                    <input type="hidden" name="produtoId" value="' . $produtoId . '">
+                                                    <input type="number" name="quantity" value="' . $Quantity . '" class="text-center" onchange="updateCart(' . $produtoId . ')" onkeyup="return false" style="width:60px" min=1 oninput="check(this)" onClick="this.select();">
                                                 </form>
                                             </td>
                                             <td>R$' . $total . '</td>
                                             <td>
                                                 <form action="partials/_manageCart.php" method="POST">
                                                     <button name="removeItem" class="btn btn-sm btn-outline-danger">Remove</button>
-                                                    <input type="hidden" name="itemId" value="'.$pizzaId. '">
+                                                    <input type="hidden" name="itemId" value="'.$produtoId. '">
                                                 </form>
                                             </td>
                                         </tr>';
@@ -100,11 +100,11 @@
                         <h5 class="mb-3 text-uppercase font-weight-bold text-center">Order summary</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 bg-light">Preço Total<span>R$<?php echo $totalPrice ?></span></li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-light">Entrega<span>R$0</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-light">Gorjeta<span>R$0</span></li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3 bg-light">
                                 <div>
                                     <strong>Preço Total</strong>
-                                    <strong><p class="mb-0">(incluindo entrega)</p></strong>
+                                    
                                 </div>
                                 <span><strong>R$<?php echo $totalPrice ?></strong></span>
                             </li>
@@ -124,23 +124,7 @@
                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#checkoutModal">Finalização da Compra</button>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <div class="pt-4">
-                        <a class="dark-grey-text d-flex justify-content-between" style="text-decoration: none; color: #050607;" data-toggle="collapse" href="#collapseExample"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Adicionar um código de desconto (opcional)
-                            <span><i class="fas fa-chevron-down pt-1"></i></span>
-                        </a>
-                        <div class="collapse" id="collapseExample">
-                            <div class="mt-3">
-                                <div class="md-form md-outline mb-0">
-                                    <input type="text" id="discount-code" class="form-control font-weight-light"
-                                    placeholder="Enviar código de desconto">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>

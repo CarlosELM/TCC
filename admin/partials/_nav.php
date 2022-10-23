@@ -18,7 +18,7 @@
       
     </header>
 
-    <div class="l-navbar" id="nav-bar">
+    <div class="l-navbar" id="nav-bar" >
         <nav class="nav">
             <div>
                 <a href="index.php" class="nav__logo">

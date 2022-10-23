@@ -5,8 +5,8 @@
             <div class="col-md-4">
                 <form action="partials/_categoryManage.php" method="post" enctype="multipart/form-data">
                     <div class="card">
-                        <div class="card-header" style="background-color: rgb(111 202 203);">
-                            Criar Nova Categoria
+                        <div class="card-header" style="background-color:#EEAD2D;">
+                           <b> Criar Nova Categoria </b>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
@@ -26,7 +26,7 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="submit" name="createCategory" class="btn btn-sm btn-primary col-sm-3 offset-md-4"> Criar </button>
+                                    <button type="submit" name="createCategory" class="btn btn-warning btn-primary col-sm-3 offset-md-4"> <b>Criar</b> </button>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                 <div class="card">
                     <div class="card-body">
                     <table class="table table-bordered table-hover mb-0">
-                        <thead style="background-color: rgb(111 202 203);">
+                        <thead style="background-color: #EEAD2D;">
                         <tr>
                             <th class="text-center" style="width:7%;">ID</th>
                             <th class="text-center">Imagem</th>

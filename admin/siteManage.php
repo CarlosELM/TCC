@@ -11,7 +11,7 @@
 
 echo '<div class="container-fluid" style="padding-left: 470px;margin-top:98px">
 	<div class="card col-lg-6 p-0">
-        <div class="title" style="background-color: rgb(111 202 203);">
+        <div class="title" style="background-color: #EEAD2D;">
             <em><h2 class="text-center" style="margin-top: 11px;">' .$systemName. '</h2></em>
         </div>
 		<div class="card-body">
@@ -37,7 +37,7 @@ echo '<div class="container-fluid" style="padding-left: 470px;margin-top:98px">
                     <input type="text" class="form-control" id="address" name="address" value="' .$address. '" required>
                 </div>
                 <center>
-                    <button name="updateDetail" class="btn btn-info btn-primary btn-block col-md-2">Salvar</button>
+                    <button name="updateDetail" class="btn btn-info btn-warning btn-block col-md-2"><b>Salvar</b></button>
                 </center>
             </form>
 		</div>

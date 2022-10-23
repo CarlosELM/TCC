@@ -19,10 +19,10 @@
 		<div class="card col-lg-12">
 			<div class="card-body">
 				<table class="table-striped table-bordered col-md-12 text-center">
-                    <thead style="background-color: rgb(111 202 203);">
+                    <thead style="background-color: #EEAD2D;">
                         <tr>
                             <th>ID do Contato</th>
-                            <th>ID do Usuário</th>
+                            <th>Usuário</th>
                             <th>Email</th>
                             <th>Número de Telefone</th>
                             <th>ID do Pedido</th>
@@ -55,7 +55,7 @@
                                         <td>' .$message. '</td>
                                         <td>' .$time. '</td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#reply' .$contactId. '">Responder</button>
+                                            <button class="btn btn-warning btn-primary" type="button" data-toggle="modal" data-target="#reply' .$contactId. '"><b>Responder </b></button>
                                         </td>
                                     </tr>';
                             }

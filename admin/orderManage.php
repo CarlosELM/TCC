@@ -13,11 +13,11 @@
         </div>
         
         <table class="table table-striped table-hover text-center" id="NoOrder">
-            <thead style="background-color: rgb(111 202 203);">
+            <thead style="background-color: #EEAD2D;">
                 <tr>
                     <th>ID do Pedido</th>
                     <th>Usuário</th>
-                    <th>Endereço</th>
+                    <th>Mesa</th>
                     <th>Número de Telefone</th>
                     <th>Preço</th>						
                     <th>Forma de Pagamento</th>
@@ -34,8 +34,7 @@
                     while($row = mysqli_fetch_assoc($result)){
                         $username = $row['username'];
                         $orderId = $row['orderId'];
-                        $address = $row['address'];
-                        $zipCode = $row['zipCode'];
+                        $mesa = $row['mesa'];
                         $phoneNo = $row['phoneNo'];
                         $amount = $row['amount'];
                         $orderDate = $row['orderDate'];
@@ -53,7 +52,7 @@
                         echo '<tr>
                                 <td>' . $orderId . '</td>
                                 <td>' . $username . '</td>
-                                <td data-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
+                                <td>' . $mesa . ' </td>
                                 <td>' . $phoneNo . '</td>
                                 <td>' . $amount . '</td>
                                 <td>' . $paymentMode . '</td>

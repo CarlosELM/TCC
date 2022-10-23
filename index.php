@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Way-Tech</title>
-    <link rel = "icon" href ="img/logo.jpg" type = "image/x-icon">
+    <link rel = "icon" href ="img/logo.png" type = "image/x-icon">
   </head>
 <body>
   <?php include 'partials/_dbconnect.php';?>
@@ -33,9 +33,9 @@
                   <div class="card" style="width: 18rem;">
                     <img src="img/card-'.$id. '.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
                     <div class="card-body">
-                      <h5 class="card-title"><a href="viewPizzaList.php?catid=' . $id . '" style="color: #EEAD2D"><b>' . $cat . '</b></a></h5>
+                      <h5 class="card-title"><a href="viewprodutoList.php?catid=' . $id . '" style="color: #EEAD2D"><b>' . $cat . '</b></a></h5>
                       <p class="card-text">' . substr($desc, 0, 30). '... </p>
-                      <a href="viewPizzaList.php?catid=' . $id . '" class="btn btn-warning"><b> Ver Tudo</b></a>
+                      <a href="viewprodutoList.php?catid=' . $id . '" class="btn btn-warning"><b> Ver Tudo</b></a>
                     </div>
                   </div>
                 </div>';

@@ -11,13 +11,11 @@
         <div class="modal-body">
             <form action="partials/_manageCart.php" method="post">
                 <div class="form-group">
-                    <b><label for="address">Endereço:</label></b>
-                    <input class="form-control" id="address" name="address" placeholder="1234 Main St" type="text" required minlength="3" maxlength="500">
+                    <b><label for="mesa">Mesa:</label></b>
+                    <input class="form-control col-md-3" id="mesa" name="mesa" type="tel" required pattern="[0-9]" maxlength="2"> 
+                    
                 </div>
-                <div class="form-group">
-                    <b><label for="address1">Segunda linha do Endereço:</label></b>
-                    <input class="form-control" id="address1" name="address1" placeholder="near st, Surat, Gujarat" type="text">
-                </div>
+    
                 <div class="form-row">
                     <div class="form-group col-md-6 mb-0">
                         <b><label for="phone">Número de Telefone:</label></b>
@@ -28,10 +26,7 @@
                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="xxxxxxxxxxx" required pattern="[0-9]{11}" maxlength="11">
                         </div>
                     </div>
-                    <div class="form-group col-md-6 mb-0">
-                        <b><label for="zipcode">CEP:</label></b>
-                        <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="xxxxxxxx" required pattern="[0-9]{8}" maxlength="8">                    
-                    </div>
+                  
                 </div>
                 <div class="form-group">
                     <b><label for="password">Senha:</label></b>    

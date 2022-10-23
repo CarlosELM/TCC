@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Home</title>
-    <link rel = "icon" href ="img/logo.jpg" type = "image/x-icon">
+    <link rel = "icon" href ="img/logo.png" type = "image/x-icon">
     <style>
     #cont {
         min-height : 515px;
@@ -39,11 +39,11 @@
                 
                 echo '<div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="img/card-'.$catId. '.jpg" class="card-img-top" alt="image for this pizza" width="249px" height="270px">
+                        <img src="img/card-'.$catId. '.jpg" class="card-img-top" alt="image for this produto" width="249px" height="270px">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="viewPizzaList.php?catid=' . $catId . '">' . $catname . '</a></h5>
+                            <h5 class="card-title"><a href="viewprodutoList.php?catid=' . $catId . '">' . $catname . '</a></h5>
                             <p class="card-text">' . substr($catdesc, 0, 29). '...</p>
-                            <a href="viewPizzaList.php?catid=' . $catId . '" class="btn btn-primary">Ver Tudo</a>
+                            <a href="viewprodutoList.php?catid=' . $catId . '" class="btn btn-primary">Ver Tudo</a>
                         </div>
                     </div>
                 </div>';
@@ -57,32 +57,32 @@
         <div class="row">
         <?php 
             $query = $_GET["search"];
-            $sql = "SELECT * FROM `pizza` WHERE MATCH(pizzaName, pizzaDesc) against('$query')"; 
+            $sql = "SELECT * FROM `produto` WHERE MATCH(produtoName, produtoDesc) against('$query')"; 
             $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_assoc($result)){
                 ?><script> document.getElementById("iteam").innerHTML = "Produtos: ";</script> <?php
                 $noResult = false;
-                $pizzaId = $row['pizzaId'];
-                $pizzaName = $row['pizzaName'];
-                $pizzaPrice = $row['pizzaPrice'];
-                $pizzaDesc = $row['pizzaDesc'];
-                $pizzaCategorieId = $row['pizzaCategorieId'];
+                $produtoId = $row['produtoId'];
+                $produtoName = $row['produtoName'];
+                $produtoPrice = $row['produtoPrice'];
+                $produtoDesc = $row['produtoDesc'];
+                $produtoCategorieId = $row['produtoCategorieId'];
                 
                 echo '<div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="img/pizza-'.$pizzaId. '.jpg" class="card-img-top" alt="image for this pizza" width="249px" height="270px">
+                        <img src="img/produto-'.$produtoId. '.jpg" class="card-img-top" alt="image for this produto" width="249px" height="270px">
                         <div class="card-body">
-                            <h5 class="card-title">' . substr($pizzaName, 0, 20). '...</h5>
-                            <h6 style="color: #ff0000">Rs. '.$pizzaPrice. '/-</h6>
-                            <p class="card-text">' . substr($pizzaDesc, 0, 29). '...</p>
+                            <h5 class="card-title">' . substr($produtoName, 0, 20). '...</h5>
+                            <h6 style="color: #ff0000">Rs. '.$produtoPrice. '/-</h6>
+                            <p class="card-text">' . substr($produtoDesc, 0, 29). '...</p>
                             <div class="row justify-content-center">';
                                 if($loggedin){
-                                    $quaSql = "SELECT `itemQuantity` FROM `viewcart` WHERE pizzaId = '$pizzaId' AND `userId`='$userId'";
+                                    $quaSql = "SELECT `itemQuantity` FROM `viewcart` WHERE produtoId = '$produtoId' AND `userId`='$userId'";
                                     $quaresult = mysqli_query($conn, $quaSql);
                                     $quaExistRows = mysqli_num_rows($quaresult);
                                     if($quaExistRows == 0) {
                                         echo '<form action="partials/_manageCart.php" method="POST">
-                                              <input type="hidden" name="itemId" value="'.$pizzaId. '">
+                                              <input type="hidden" name="itemId" value="'.$produtoId. '">
                                               <button type="submit" name="addToCart" class="btn btn-primary mx-2">Comprar</button>';
                                     }else {
                                         echo '<a href="viewCart.php"><button class="btn btn-primary mx-2">Ir ao Carrinho</button></a>';
@@ -92,7 +92,7 @@
                                     echo '<button class="btn btn-primary mx-2" data-toggle="modal" data-target="#loginModal">Comprar</button>';
                                 }
                                 echo '</form>
-                                <a href="viewPizza.php?pizzaid=' . $pizzaId . '"><button class="btn btn-primary">Ver Mais</button></a>
+                                <a href="viewproduto.php?produtoid=' . $produtoId . '"><button class="btn btn-primary">Ver Mais</button></a>
                             </div>
                         </div>
                     </div>

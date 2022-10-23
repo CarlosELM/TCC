@@ -26,9 +26,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $orderId = $_POST['orderId'];
         $name = $_POST['name'];
         $time = $_POST['time'];
-        $phone = $_POST['phone'];
         if($trackId == NULL) {
-            $sql = "INSERT INTO `deliverydetails` (`orderId`, `deliveryBoyName`, `deliveryBoyPhoneNo`, `deliveryTime`, `dateTime`) VALUES ('$orderId', '$name', '$phone', '$time', current_timestamp())";   
+            $sql = "INSERT INTO `deliverydetails` (`orderId`, `atendenteName`, `deliveryTime`, `dateTime`) VALUES ('$orderId', '$name', '$time', current_timestamp())";   
             $result = mysqli_query($conn, $sql);
             $trackId = $conn->insert_id;
             if ($result){
@@ -43,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         else {
-            $sql = "UPDATE `deliverydetails` SET `deliveryBoyName`='$name', `deliveryBoyPhoneNo`='$phone', `deliveryTime`='$time',`dateTime`=current_timestamp() WHERE `id`='$trackId'";   
+            $sql = "UPDATE `deliverydetails` SET `atendenteName`='$name', `deliveryTime`='$time',`dateTime`=current_timestamp() WHERE `id`='$trackId'";   
             $result = mysqli_query($conn, $sql);
             if ($result){
                 echo "<script>alert('update successfully');

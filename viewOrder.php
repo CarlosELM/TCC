@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <title>Seus Pedidos</title>
-    <link rel = "icon" href ="img/logo.jpg" type = "image/x-icon">
+    <link rel = "icon" href ="img/logo.png" type = "image/x-icon">
 <style>
     .footer {
       position: fixed;
@@ -153,7 +153,7 @@
                 <thead>
                     <tr>
                         <th>Id do Pedido</th>
-                        <th>Endereço</th>
+                        <th>Mesa</th>
                         <th>Número de Telefone</th>
                         <th>Preço</th>						
                         <th>Modo de Pagamento</th>
@@ -169,17 +169,16 @@
                         $counter = 0;
                         while($row = mysqli_fetch_assoc($result)){
                             $orderId = $row['orderId'];
-                            $address = $row['address'];
-                            $zipCode = $row['zipCode'];
+                            $mesa = $row['mesa'];
                             $phoneNo = $row['phoneNo'];
                             $amount = $row['amount'];
                             $orderDate = $row['orderDate'];
                             $paymentMode = $row['paymentMode'];
                             if($paymentMode == 0) {
-                                $paymentMode = "Cash on Delivery";
+                                $paymentMode = "Pagar na Hora";
                             }
                             else {
-                                $paymentMode = "Online";
+                                $paymentMode = "Pagamento Online";
                             }
                             $orderStatus = $row['orderStatus'];
                             
@@ -187,7 +186,7 @@
                             
                             echo '<tr>
                                     <td>' . $orderId . '</td>
-                                    <td>' . substr($address, 0, 20) . '...</td>
+                                    <td>' . $mesa . '</td>
                                     <td>' . $phoneNo . '</td>
                                     <td>R$' . $amount . '</td>
                                     <td>' . $paymentMode . '</td>

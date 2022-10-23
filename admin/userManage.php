@@ -3,7 +3,7 @@
 	
 	<div class="row">
         <div class="col-lg-12">
-            <button class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#newUser"><i class="fa fa-plus"></i> Novo usuário</button>
+            <button class="btn btn-warning float-right btn-sm" data-toggle="modal" data-target="#newUser"><i class="fa fa-plus"></i> <b>Novo usuário</b></button>
         </div>
 	</div>
 	    <br>
@@ -11,7 +11,7 @@
 		<div class="card col-lg-12">
 			<div class="card-body">
 				<table class="table-striped table-bordered col-md-12 text-center">
-                    <thead style="background-color: rgb(111 202 203);">
+                    <thead style="background-color: #EEAD2D;">
                         <tr>
                             <th>ID do Usuário</th>
                             <th style="width:7%">Imagem</th>
@@ -81,7 +81,7 @@
 <div class="modal fade" id="newUser" tabindex="-1" role="dialog" aria-labelledby="newUser" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: rgb(111 202 203);">
+      <div class="modal-header" style="background-color: #EEAD2D;">
         <h5 class="modal-title" id="newUser">Criar Novo Usuário</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -133,7 +133,7 @@
                   <b><label for="password1">Confirmar Senha:</label></b>
                   <input class="form-control" id="cpassword" name="cpassword" placeholder="Digite novamente sua Senha" type="password" required data-toggle="password" minlength="4" maxlength="21">
               </div>
-              <button type="submit" name="createUser" class="btn btn-success">Criar</button>
+              <button type="submit" name="createUser" class="btn btn-warning"><b>Criar</b></button>
             </form>
       </div>
     </div>

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Admin Page</title>
-    <link rel = "icon" href ="/tcc/img/logo.jpg" type = "image/x-icon">
+    <link rel = "icon" href ="/tcc/img/logo.png" type = "image/x-icon">
     
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assetsForSideBar/css/styles.css">
@@ -37,7 +37,7 @@
 
         if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="true"){
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:100%">
-                    <strong>Success!</strong> You are logged in
+                    <strong>Logado com sucesso!</strong>
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
                   </div>';
         }
