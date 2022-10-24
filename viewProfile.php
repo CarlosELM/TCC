@@ -161,7 +161,7 @@
                         <div class="upload-btn-wrapper">
                             <small>Mudar Imagem:</small>
                             <button class="btn upload">Escolher</button>
-                            <input type="file" name="image" id="image" accept="image/*">
+                            <input type="file" name="image" id="image" accept=".jpg" class="form-control" required style="border:none\">
                         </div>
                         <button type="submit" name="updateProfilePic" class="btn btn-primary" style="margin-top: -20px;font-size: 10px;padding: 3px 8px;">Atualizar</button>
                     </form>

@@ -41,9 +41,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="img/card-'.$catId. '.jpg" class="card-img-top" alt="image for this produto" width="249px" height="270px">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="viewprodutoList.php?catid=' . $catId . '">' . $catname . '</a></h5>
+                            <h5 class="card-title"><a href="viewprodutoList.php?catid=' . $catId . '" style="color: #EEAD2D">' . $catname . '</a></h5>
                             <p class="card-text">' . substr($catdesc, 0, 29). '...</p>
-                            <a href="viewprodutoList.php?catid=' . $catId . '" class="btn btn-primary">Ver Tudo</a>
+                            <a href="viewprodutoList.php?catid=' . $catId . '" class="btn btn-warning"><b>Ver Tudo</b></a>
                         </div>
                     </div>
                 </div>';
@@ -83,22 +83,22 @@
                                     if($quaExistRows == 0) {
                                         echo '<form action="partials/_manageCart.php" method="POST">
                                               <input type="hidden" name="itemId" value="'.$produtoId. '">
-                                              <button type="submit" name="addToCart" class="btn btn-primary mx-2">Comprar</button>';
+                                              <button type="submit" name="addToCart" class="btn btn-warning mx-2"><b>Comprar</b></button>';
                                     }else {
-                                        echo '<a href="viewCart.php"><button class="btn btn-primary mx-2">Ir ao Carrinho</button></a>';
+                                        echo '<a href="viewCart.php"><button class="btn btn-warning mx-2"><b>Ir ao Carrinho</b></button></a>';
                                     }
                                 }
                                 else{
-                                    echo '<button class="btn btn-primary mx-2" data-toggle="modal" data-target="#loginModal">Comprar</button>';
+                                    echo '<button class="btn btn-warning mx-2" data-toggle="modal" data-target="#loginModal"><b>Comprar</b></button>';
                                 }
                                 echo '</form>
-                                <a href="viewproduto.php?produtoid=' . $produtoId . '"><button class="btn btn-primary">Ver Mais</button></a>
+                                <a href="viewproduto.php?produtoid=' . $produtoId . '"><button class="btn btn-info">Ver Mais</button></a>
                             </div>
                         </div>
                     </div>
                 </div>';
             }
-            if($noResult) {
+            if($noResult == true) {
                 echo '<div class="jumbotron jumbotron-fluid">
                     <div class="container">
                         <h1>Sua pesquisa por - <em>"' .$_GET['search']. '"</em> - Não teve resultados.</h1>

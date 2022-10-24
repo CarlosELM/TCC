@@ -12,7 +12,7 @@
             <form action="partials/_manageCart.php" method="post">
                 <div class="form-group">
                     <b><label for="mesa">Mesa:</label></b>
-                    <input class="form-control col-md-3" id="mesa" name="mesa" type="tel" required pattern="[0-9]" maxlength="2"> 
+                    <input class="form-control col-md-3" id="mesa" name="mesa" type="tel" maxlength="2"> 
                     
                 </div>
     

@@ -12,7 +12,7 @@
 
 
         <div class="header__img">
-            <img class="rounded-circle mb-3 bg-dark" src="../img/person-<?php echo $userId; ?>.jpg" onError="this.src = 'img/profilePic.jpg'" style="width:40px; height:40px">
+            <img class="rounded-circle mb-3 bg-dark" src="../img/person-<?php echo $userId; ?>.jpg" onError="this.src = '../img/profilePic.jpg'" style="width:40px; height:40px">
           </div>
 
       

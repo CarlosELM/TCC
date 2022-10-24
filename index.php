@@ -29,17 +29,19 @@
           $id = $row['categorieId'];
           $cat = $row['categorieName'];
           $desc = $row['categorieDesc'];
+
           echo '<div class="col-xs-3 col-sm-3 col-md-3">
                   <div class="card" style="width: 18rem;">
                     <img src="img/card-'.$id. '.jpg" class="card-img-top" alt="image for this category" width="249px" height="270px">
                     <div class="card-body">
                       <h5 class="card-title"><a href="viewprodutoList.php?catid=' . $id . '" style="color: #EEAD2D"><b>' . $cat . '</b></a></h5>
-                      <p class="card-text">' . substr($desc, 0, 30). '... </p>
+                      <p class="card-text">' . $desc . '</p>
                       <a href="viewprodutoList.php?catid=' . $id . '" class="btn btn-warning"><b> Ver Tudo</b></a>
                     </div>
                   </div>
                 </div>';
         }
+       
       ?>
     </div>
   </div>

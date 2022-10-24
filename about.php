@@ -103,50 +103,11 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div>
             <h3>Bem-vindo a <strong>Way-Tech</strong></h3>
             <h3><strong>O melhor software do mercado para seu estabelecimento!</strong></h3>
             <p class="font-italic">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <div class="skills-content">
-              <p><b>Rating: </b></p>
-              <div class="progress">
-                <span class="skill">5 estrelas <i class="val">93%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">4 estrelas <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">3 estrelas <i class="val">30%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">2 estrelas <i class="val">5%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">1 estrela <i class="val">0%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-            </div>
+          
           </div>
         </div>
       </div>

@@ -20,18 +20,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $uploadfile = $uploaddir . $newfilename;
 
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-                    echo "<script>alert('success');
+                    echo "<script>alert('Criada com Sucesso!');
                             window.location=document.referrer;
                         </script>";
                 } else {
-                    echo "<script>alert('failed to upload image');
+                    echo "<script>alert('Falha ao criar! Tente novamente.');
                             window.location=document.referrer;
                         </script>";
                 }
 
             }
             else{
-                echo '<script>alert("Please select an image file to upload.");
+                echo '<script>alert("Por favor selecione uma imagem para atualizar.");
                     </script>';
             }
         }
@@ -45,12 +45,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             if (file_exists($filename)) {
                 unlink($filename);
             }
-            echo "<script>alert('Removed');
+            echo "<script>alert('Categoria Removida!');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Remoção falhou! Tente novamente.');
                 window.location=document.referrer;
                 </script>";
         }
@@ -63,12 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `categories` SET `categorieName`='$catName', `categorieDesc`='$catDesc' WHERE `categorieId`='$catId'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update');
+            echo "<script>alert('Atualizada com Sucesso!');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Atualização falhou! Tente novamente.');
                 window.location=document.referrer;
                 </script>";
         }
@@ -84,17 +84,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadfile = $uploaddir . $newfilename;
 
             if (move_uploaded_file($_FILES['catimage']['tmp_name'], $uploadfile)) {
-                echo "<script>alert('success');
+                echo "<script>alert('Atualizada com Sucesso!');
                         window.location=document.referrer;
                     </script>";
             } else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Atualização falhou! Tente novamente.');
                         window.location=document.referrer;
                     </script>";
             }
         }
         else{
-            echo '<script>alert("Please select an image file to upload.");
+            echo '<script>alert("Por favor selecione uma imagem para atualizar.");
             window.location=document.referrer;
                 </script>';
         }

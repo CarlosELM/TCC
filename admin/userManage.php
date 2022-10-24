@@ -54,13 +54,13 @@
                                     <td>' .$userType. '</td>
                                     <td class="text-center">
                                         <div class="row mx-auto" style="width:112px">
-                                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editUser' .$Id. '" type="button">Edit</button>';
+                                            <button class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editUser' .$Id. '" type="button"><b>Edit</b></button>';
                                             if($Id == 1) {
-                                                echo '<button class="btn btn-sm btn-danger" disabled style="margin-left:9px;">Delete</button>';
+                                                echo '<button class="btn btn-sm btn-danger" disabled style="margin-left:6px;">Delete</button>';
                                             }
                                             else {
                                                 echo '<form action="partials/_userManage.php" method="POST">
-                                                        <button name="removeUser" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>
+                                                        <button name="removeUser" class="btn btn-sm btn-danger" style="margin-left:6px;">Delete</button>
                                                         <input type="hidden" name="Id" value="'.$Id. '">
                                                     </form>';
                                             }
@@ -158,7 +158,7 @@
 <div class="modal fade" id="editUser<?php echo $Id; ?>" tabindex="-1" role="dialog" aria-labelledby="editUser<?php echo $Id; ?>" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: rgb(111 202 203);">
+      <div class="modal-header" style="background-color: #EEAD2D;">
         <h5 class="modal-title" id="editUser<?php echo $Id; ?>">ID do Usuário: <b><?php echo $Id; ?></b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>

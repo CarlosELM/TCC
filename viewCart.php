@@ -80,14 +80,14 @@
                                             <td>R$' . $total . '</td>
                                             <td>
                                                 <form action="partials/_manageCart.php" method="POST">
-                                                    <button name="removeItem" class="btn btn-sm btn-outline-danger">Remove</button>
+                                                    <button name="removeItem" class="btn btn-sm btn-outline-danger">Remover</button>
                                                     <input type="hidden" name="itemId" value="'.$produtoId. '">
                                                 </form>
                                             </td>
                                         </tr>';
                                 }
                                 if($counter==0) {
-                                    ?><script> document.getElementById("cont").innerHTML = '<div class="col-md-12 my-5"><div class="card"><div class="card-body cart"><div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"><h3><strong>Seu carrinho está vazio</strong></h3><h4>Vá ao cardápio e escolha seus produtos!</h4> <a href="index.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">Ir ao Cardápio</a> </div></div></div></div>';</script> <?php
+                                    ?><script> document.getElementById("cont").innerHTML = '<div class="col-md-12 my-5"><div class="card"><div class="card-body cart"><div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"><h3><strong>Seu carrinho está vazio</strong></h3><h4>Vá ao cardápio e escolha seus produtos!</h4> <a href="index.php" class="btn btn-warning cart-btn-transform m-3" data-abc="true"><b>Ir ao Cardápio</b></a> </div></div></div></div>';</script> <?php
                                 }
                             ?>
                         </tbody>
@@ -121,7 +121,7 @@
                                 Pagamento online
                             </label>
                         </div><br>
-                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#checkoutModal">Finalização da Compra</button>
+                        <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#checkoutModal"><b>Finalização da Compra</b></button>
                     </div>
                 </div>
                

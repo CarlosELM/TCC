@@ -62,9 +62,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/produto-'.$produtoId. '.jpg" class="card-img-top" alt="image for this produto" width="249px" height="270px">
                             <div class="card-body">
-                                <h5 class="card-title">' . substr($produtoName, 0, 20). '...</h5>
-                                <h6 style="color: #ff0000">R$'.$produtoPrice. '/-</h6>
-                                <p class="card-text">' . substr($produtoDesc, 0, 29). '...</p>   
+                                <h5 class="card-title">' .$produtoName. '</h5>
+                                <h6 style="color: #ff0000">R$'.$produtoPrice. '</h6>
+                                <p class="card-text">' . substr($produtoDesc, 0, 20). '...</p>   
                                 <div class="row justify-content-center">';
                                 if($loggedin){
                                     $quaSql = "SELECT `itemQuantity` FROM `viewcart` WHERE produtoId = '$produtoId' AND `userId`='$userId'";
@@ -73,16 +73,16 @@
                                     if($quaExistRows == 0) {
                                         echo '<form action="partials/_manageCart.php" method="POST">
                                               <input type="hidden" name="itemId" value="'.$produtoId. '">
-                                              <button type="submit" name="addToCart" class="btn btn-primary mx-2">Comprar</button>';
+                                              <button type="submit" name="addToCart" class="btn btn-warning mx-2"><b>Comprar</b></button>';
                                     }else {
-                                        echo '<a href="viewCart.php"><button class="btn btn-primary mx-2">Ir ao Carrinho</button></a>';
+                                        echo '<a href="viewCart.php"><button class="btn btn-warning mx-2"><b>Ir ao Carrinho</b></button></a>';
                                     }
                                 }
                                 else{
-                                    echo '<button class="btn btn-primary mx-2" data-toggle="modal" data-target="#loginModal">Comprar</button>';
+                                    echo '<button class="btn btn-warning mx-2" data-toggle="modal" data-target="#loginModal"><b>Comprar</b></button>';
                                 }
                             echo '</form>                            
-                                <a href="viewproduto.php?produtoid=' . $produtoId . '" class="mx-2"><button class="btn btn-primary">Ver Mais</button></a> 
+                                <a href="viewproduto.php?produtoid=' . $produtoId . '" class="mx-2"><button class="btn btn-info">Ver Mais</button></a> 
                                 </div>
                             </div>
                         </div>

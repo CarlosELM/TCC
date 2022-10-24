@@ -72,14 +72,14 @@
             <div class="card-body">
             <form action="partials/_handleLogin.php" method="post">
                 <div class="form-group">
-                <label for="username" class="control-label"><b>Username</b></label>
+                <label for="username" class="control-label"><b>Usuário</b></label>
                 <input type="text" id="username" name="username" class="form-control">
                 </div>
                 <div class="form-group">
-                <label for="password" class="control-label"><b>Password</b></label>
+                <label for="password" class="control-label"><b>Senha</b></label>
                 <input type="password" id="password" name="password" class="form-control">
                 </div>
-                <center><button type="submit" class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
+                <center><button type="submit" class="btn-sm btn-block btn-wave col-md-4 btn-warning"><b>Entrar</b></button></center>
             </form>
             </div>
         </div>
@@ -90,7 +90,7 @@
     <?php
         if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="false"){
         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Warning!</strong> Invalid Credentials
+                <strong>Você não entrou!</strong> Informações Inválidas
                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
                 </div>';
         }

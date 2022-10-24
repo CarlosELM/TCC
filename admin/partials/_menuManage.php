@@ -23,24 +23,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $uploadfile = $uploaddir . $newfilename;
 
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-                    echo "<script>alert('success');
+                    echo "<script>alert('Criado com Sucesso!');
                             window.location=document.referrer;
                         </script>";
                 } else {
-                    echo "<script>alert('failed');
+                    echo "<script>alert('Falha ao criar! Tente novamente.');
                             window.location=document.referrer;
                         </script>";
                 }
 
             }
             else{
-                echo '<script>alert("Please select an image file to upload.");
+                echo '<script>alert("Por favor selecione uma imagem para atualizar.");
                         window.location=document.referrer;
                     </script>';
             }
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Falha ao criar! Tente novamente.');
                     window.location=document.referrer;
                 </script>";
         }
@@ -54,12 +54,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             if (file_exists($filename)) {
                 unlink($filename);
             }
-            echo "<script>alert('Removed');
+            echo "<script>alert('Removido com Sucesso!');
                 window.location=document.referrer;
             </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Remoção falhou! Tente novamente.');
             window.location=document.referrer;
             </script>";
         }
@@ -74,12 +74,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `produto` SET `produtoName`='$produtoName', `produtoPrice`='$produtoPrice', `produtoDesc`='$produtoDesc', `produtoCategorieId`='$produtoCategorieId' WHERE `produtoId`='$produtoId'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update');
+            echo "<script>alert('Atualizado com Sucesso!');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Atualização falhou! Tente novamente.');
                 window.location=document.referrer;
                 </script>";
         }
@@ -95,17 +95,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadfile = $uploaddir . $newfilename;
 
             if (move_uploaded_file($_FILES['itemimage']['tmp_name'], $uploadfile)) {
-                echo "<script>alert('success');
+                echo "<script>alert('Atualizada com sucesso!');
                         window.location=document.referrer;
                     </script>";
             } else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Atualização falhou! Tente novamente.');
                         window.location=document.referrer;
                     </script>";
             }
         }
         else{
-            echo '<script>alert("Please select an image file to upload.");
+            echo '<script>alert("Por favor selecione uma imagem para atualizar.");
             window.location=document.referrer;
                 </script>';
         }

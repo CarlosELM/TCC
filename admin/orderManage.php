@@ -62,7 +62,7 @@
                             </tr>';
                     }
                     if($counter==0) {
-                        ?><script> document.getElementById("NoOrder").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> You have not Recieve any Order!	</div>';</script> <?php
+                        ?><script> document.getElementById("NoOrder").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> Você ainda não recebeu pedidos!	</div>';</script> <?php
                     } 
                 ?>
             </tbody>

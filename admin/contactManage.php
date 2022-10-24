@@ -55,12 +55,12 @@
                                         <td>' .$message. '</td>
                                         <td>' .$time. '</td>
                                         <td class="text-center">
-                                            <button class="btn btn-warning btn-primary" type="button" data-toggle="modal" data-target="#reply' .$contactId. '"><b>Responder </b></button>
+                                            <button class="btn btn-warning btn-warning" type="button" data-toggle="modal" data-target="#reply' .$contactId. '"><b>Responder </b></button>
                                         </td>
                                     </tr>';
                             }
                             if($count==0) {
-                              ?><script> document.getElementById("notempty").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> You have not recieve any message!	</div>';
+                              ?><script> document.getElementById("notempty").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> Você ainda não recebeu mensagens!	</div>';
                               document.getElementById("empty").innerHTML = '';
                               </script> <?php
                             }
@@ -85,7 +85,7 @@
     <div class="modal fade" id="reply<?php echo $contactId; ?>" tabindex="-1" role="dialog" aria-labelledby="reply<?php echo $contactId; ?>" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="background-color: rgb(111 202 203);">
+          <div class="modal-header" style="background-color: #EEAD2D;">
             <h5 class="modal-title" id="reply<?php echo $contactId; ?>">Resposta (ID do Contato: <?php echo $contactId; ?>)</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -99,7 +99,7 @@
                 </div>
                 <input type="hidden" id="contactId" name="contactId" value="<?php echo $contactId; ?>">
                 <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                <button type="submit" class="btn btn-success" name="contactReply">Responder</button>
+                <button type="submit" class="btn btn-warning" name="contactReply"><b>Responder</b></button>
             </form>
           </div>
         </div>
@@ -114,7 +114,7 @@
     <div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="history" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(187 188 189);">
+            <div class="modal-header" style="background-color: #EEAD2D;">
               <h5 class="modal-title" id="history">Suas Respostas</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -122,7 +122,7 @@
             </div>
             <div class="modal-body" id="notReply">
             <table class="table-striped table-bordered col-md-12 text-center">
-                <thead style="background-color: rgb(111 202 203);">
+                <thead style="background-color: #EEAD2D;">
                     <tr>
                         <th>ID do Contato</th>
                         <th>Resposta</th>
@@ -148,7 +148,7 @@
                     }    
 
                     if($totalReply==0) {
-                      ?><script> document.getElementById("notReply").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> You have not Reply any message!	</div>';</script> <?php
+                      ?><script> document.getElementById("notReply").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%"> Você ainda não respondeu nenhuma mensagem!	</div>';</script> <?php
                     }   
 
                 ?>

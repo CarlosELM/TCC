@@ -167,7 +167,7 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text" id="basic-addon">+55</span>
                                     </div>
-                                    <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="basic-addon" placeholder="Digite seu Número de Telefone" required pattern="[0-9]{11}" value="">
+                                    <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="basic-addon" placeholder="Digite seu Número de Telefone" required pattern="[0-9]{11}" maxlength="11" >
                                 </div>
                             </div>
                           </div>

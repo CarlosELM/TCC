@@ -93,9 +93,9 @@
                                             </td>
                                             <td class="text-center">
 												<div class="row mx-auto" style="width:112px">
-													<button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#updateItem' .$produtoId. '">Edit</button>
+													<button class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#updateItem' .$produtoId. '"><b>Edit</b></button>
 													<form action="partials/_menuManage.php" method="POST">
-														<button name="removeItem" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>
+														<button name="removeItem" class="btn btn-sm btn-danger" style="margin-left:6px;">Delete</button>
 														<input type="hidden" name="produtoId" value="'.$produtoId. '">
 													</form>
 												</div>

@@ -66,9 +66,9 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="row mx-auto" style="width:112px">
-                                            <button class="btn btn-sm btn-primary edit_cat" type="button" data-toggle="modal" data-target="#updateCat' .$catId. '">Edit</button>
+                                            <button class="btn btn-sm btn-warning edit_cat" type="button" data-toggle="modal" data-target="#updateCat' .$catId. '"><b>Edit</b></button>
                                             <form action="partials/_categoryManage.php" method="POST">
-                                                <button name="removeCategory" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>
+                                                <button name="removeCategory" class="btn btn-sm btn-danger" style="margin-left:6px;">Delete</button>
                                                 <input type="hidden" name="catId" value="'.$catId. '">
                                             </form></div>
                                         </td>
@@ -99,7 +99,7 @@
 <div class="modal fade" id="updateCat<?php echo $catId; ?>" tabindex="-1" role="dialog" aria-labelledby="updateCat<?php echo $catId; ?>" aria-hidden="true" style="width: -webkit-fill-available;">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: rgb(111 202 203);">
+      <div class="modal-header" style="background-color: #EEAD2D;">
         <h5 class="modal-title" id="updateCat<?php echo $catId; ?>">ID da Categoria: <b><?php echo $catId; ?></b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -113,7 +113,7 @@
 					<input type="file" name="catimage" id="catimage" accept=".jpg" class="form-control" required style="border:none;" onchange="document.getElementById('itemPhoto').src = window.URL.createObjectURL(this.files[0])">
 					<small id="Info" class="form-text text-muted mx-3">Faça upload do arquivo .jpg</small>
 					<input type="hidden" id="catId" name="catId" value="<?php echo $catId; ?>">
-					<button type="submit" class="btn btn-success my-1" name="updateCatPhoto">Atualizar Imagem</button>
+					<button type="submit" class="btn btn-warning my-1" name="updateCatPhoto"><b>Atualizar Imagem</b></button>
 				</div>
 				<div class="form-group col-md-4">
 					<img src="/tcc/img/card-<?php echo $catId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="Category image" width="100" height="100">
@@ -130,7 +130,7 @@
                 <textarea class="form-control" id="desc" name="desc" rows="2" required minlength="6"><?php echo $catDesc; ?></textarea>
             </div>
             <input type="hidden" id="catId" name="catId" value="<?php echo $catId; ?>">
-            <button type="submit" class="btn btn-success" name="updateCategory">Atualizar</button>
+            <button type="submit" class="btn btn-warning" name="updateCategory"><b>Atualizar</b></button>
         </form>
       </div>
     </div>

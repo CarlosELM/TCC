@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $Id = $_POST["Id"];
         $sql = "DELETE FROM `users` WHERE `id`='$Id'";   
         $result = mysqli_query($conn, $sql);
-        echo "<script>alert('Removed');
+        echo "<script>alert('Removido com Sucesso!');
             window.location=document.referrer;
             </script>";
     }
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $existSql);
         $numExistRows = mysqli_num_rows($result);
         if($numExistRows > 0){
-            echo "<script>alert('Username Already Exists');
+            echo "<script>alert('Usuário já existe!');
                     window.location=document.referrer;
                 </script>";
         }
@@ -37,17 +37,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql = "INSERT INTO `users` ( `username`, `firstName`, `lastName`, `email`, `phone`, `userType`, `password`, `joinDate`) VALUES ('$username', '$firstName', '$lastName', '$email', '$phone', '$userType', '$hash', current_timestamp())";   
                 $result = mysqli_query($conn, $sql);
                 if ($result){
-                    echo "<script>alert('Success');
+                    echo "<script>alert('Criado com Sucesso!');
                             window.location=document.referrer;
                         </script>";
                 }else {
-                    echo "<script>alert('Failed');
+                    echo "<script>alert('Criação falhou! Tente novamente.');
                             window.location=document.referrer;
                         </script>";
                 }
             }
             else{
-                echo "<script>alert('Passwords do not match');
+                echo "<script>alert('As senhas não coincidem!');
                     window.location=document.referrer;
                 </script>";
             }
@@ -64,12 +64,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `users` SET `firstName`='$firstName', `lastName`='$lastName', `email`='$email', `phone`='$phone', `userType`='$userType' WHERE `id`='$id'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update successfully');
+            echo "<script>alert('Atualizado com Sucesso!');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Atualização falhou! Tente novamente.');
                 window.location=document.referrer;
                 </script>";
         }
@@ -85,17 +85,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadfile = $uploaddir . $newfilename;
 
             if (move_uploaded_file($_FILES['userimage']['tmp_name'], $uploadfile)) {
-                echo "<script>alert('success');
+                echo "<script>alert('Atualizado com Sucesso!');
                         window.location=document.referrer;
                     </script>";
             } else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Atualização falhou! Tente novamente.');
                         window.location=document.referrer;
                     </script>";
             }
         }
         else{
-            echo '<script>alert("Please select an image file to upload.");
+            echo '<script>alert("Por favor selecione uma imagem para atualizar.");
             window.location=document.referrer;
                 </script>';
         }
@@ -106,12 +106,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $filename = $_SERVER['DOCUMENT_ROOT']."/tcc/img/person-".$id.".jpg";
         if (file_exists($filename)) {
             unlink($filename);
-            echo "<script>alert('Removed');
+            echo "<script>alert('Removido com Sucesso!');
                 window.location=document.referrer;
             </script>";
         }
         else {
-            echo "<script>alert('no photo available.');
+            echo "<script>alert('Nenhuma foto disponível.');
                 window.location=document.referrer;
             </script>";
         }
