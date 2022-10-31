@@ -49,7 +49,7 @@
                     </a>
                     <a href="index.php?page=userManage" class="nav__link nav-userManage">
                       <i class='bx bx-user nav__icon' ></i>
-                      <span class="nav__name">Usuário</span>
+                      <span class="nav__name">Usuários</span>
                     </a>
                     <a href="index.php?page=siteManage" class="nav__link nav-siteManage">
                       <i class="fas fa-cogs"></i>
@@ -59,7 +59,7 @@
             </div>
             <a href="partials/_logout.php" class="nav__link">
               <i class='bx bx-log-out nav__icon' ></i>
-              <span class="nav__name">Log Out</span>
+              <span class="nav__name">Sair</span>
             </a>
         </nav>
     </div>  

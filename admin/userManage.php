@@ -46,8 +46,8 @@
                                     <td><img src="/tcc/img/person-' .$Id. '.jpg" alt="image for this user" onError="this.src =\'/tcc/img/profilePic.jpg\'" width="100px" height="100px"></td>
                                     <td>' .$username. '</td>
                                     <td>
-                                        <p>First Name : <b>' .$firstName. '</b></p>
-                                        <p>Last Name : <b>' .$lastName. '</b></p>
+                                        <p>Nome : <b>' .$firstName. '</b></p>
+                                        <p>Sobrenome: <b>' .$lastName. '</b></p>
                                     </td>
                                     <td>' .$email. '</td>
                                     <td>' .$phone. '</td>

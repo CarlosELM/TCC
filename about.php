@@ -49,7 +49,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown mb-0">Nossa missão</h2>
-                <p class="animate__animated animate__fadeInUp">Melhorar, não só a experiencia do consumidor, mas também a do trabalhador  .</p>
+                <p class="animate__animated animate__fadeInUp">Melhorar, não só a experiencia do consumidor, mas também a do trabalhador.</p>
                 <a href="index.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Veja nossa loja!</a>
               </div>
             </div>
@@ -168,7 +168,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
             <div class="member">
-              <img src="assets/img/team/eu.jpg" class="img-fluid" alt="">
+              <img src="assets/img/team/eu.png" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Carlos Eduardo</h4>
@@ -183,7 +183,7 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="member">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/team/pablo.png" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Pablo Alberto</h4>
