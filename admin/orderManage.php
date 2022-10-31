@@ -54,7 +54,7 @@
                                 <td>' . $username . '</td>
                                 <td>' . $mesa . ' </td>
                                 <td>' . $phoneNo . '</td>
-                                <td>' . $amount . '</td>
+                                <td>R$' . $amount . '</td>
                                 <td>' . $paymentMode . '</td>
                                 <td>' . $orderDate . '</td>
                                 <td><a href="#" data-toggle="modal" data-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>
